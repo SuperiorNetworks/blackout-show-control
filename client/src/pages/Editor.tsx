@@ -12,6 +12,7 @@ import CamerasTab from "@/components/tabs/CamerasTab";
 import RelayTestTab from "@/components/tabs/RelayTestTab";
 import LiveControlTab from "@/components/tabs/LiveControlTab";
 import LogsTab from "@/components/tabs/LogsTab";
+import SimulationTab from "@/components/tabs/SimulationTab";
 import StatusBar from "@/components/StatusBar";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ const TABS = [
   { id: "relaytest", label: "RELAY TEST",icon: "🔌" },
   { id: "live",      label: "LIVE CTRL", icon: "▶" },
   { id: "logs",      label: "LOGS",      icon: "📋" },
+  { id: "simulation", label: "SIMULATION", icon: "🏙" },
 ];
 
 function EditorInner() {
@@ -90,6 +92,7 @@ function EditorInner() {
         {activeTab === "relaytest" && <RelayTestTab />}
         {activeTab === "live"      && <LiveControlTab />}
         {activeTab === "logs"      && <LogsTab />}
+        {activeTab === "simulation" && <SimulationTab />}
       </main>
 
       {/* ── Status Bar ── */}
