@@ -114,6 +114,17 @@ client/public/__manus__/version.json
 
 # Ignore uploaded audio files (too large for git)
 web-app/data/uploads/*/audio.mp3
+sandstorm-php/data/uploads/*/audio.mp3
+sandstorm-v2/Server/data/uploads/*/audio.mp3
+
+# PHP runtime — session data, uploads, ESP queue payloads
+sandstorm-php/data/sessions/*/
+sandstorm-v2/Server/data/sessions/*/
+sandstorm-php/data/uploads/*/
+sandstorm-v2/Server/data/uploads/*/
+sandstorm-php/data/esp_queue/*.json
+sandstorm-v2/Server/data/esp_queue/*.json
 
 # Never commit WiFi credentials — edit firmware locally only
 # firmware/sandstorm-esp32/sandstorm_relay_controller.ino is safe (credentials scrubbed)
+# sandstorm-v2/Relay Controller/ — credentials scrubbed in V1.ino.txt

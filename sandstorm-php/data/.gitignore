@@ -1,0 +1,28 @@
+# This .gitignore preserves the data/ folder structure in git
+# but excludes all runtime-generated content.
+#
+# The PHP app creates these files at runtime — they should NOT be committed.
+# On a fresh server deploy, the app will recreate them automatically.
+
+# Exclude everything by default
+*
+
+# But keep this .gitignore itself
+!.gitignore
+
+# And keep the demo session as a reference (optional — remove if not wanted)
+!sessions/
+sessions/*
+!sessions/demo/
+sessions/demo/*
+!sessions/demo/timeline.json
+!sessions/demo/waveform.json
+!sessions/demo/control.json
+
+# Keep uploads folder structure but not actual files
+!uploads/
+uploads/*
+
+# Keep esp_queue folder structure but not live queue payloads
+!esp_queue/
+esp_queue/*
